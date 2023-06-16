@@ -28,3 +28,10 @@ GRANT SELECT ON v_$sql_plan TO turtle;
 GRANT SELECT ON v_$sql TO turtle;
 
 commit;
+
+
+
+GRANT SELECT ON v_$session TO scott;
+GRANT SELECT ON v_$sql_plan_statistics_all TO scott;
+GRANT SELECT ON v_$sql_plan TO scott;
+GRANT SELECT ON v_$sql TO scott;
