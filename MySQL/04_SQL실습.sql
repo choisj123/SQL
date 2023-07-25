@@ -27,3 +27,40 @@ select CountryCode, population
 from city
 order by CountryCode, population desc;
 
+-- LIMIT
+SELECT * 
+FROM CITY 
+WHERE CountryCode = 'KOR' 
+ORDER BY POPULATION desc limit 10;
+
+-- 집합 함수
+select count(*)
+from city
+where CountryCode = 'KOR';
+
+select sum(population), round(avg(population))
+from city
+where CountryCode = 'KOR';
+
+select max(population), min(population)
+from city
+where CountryCode = 'KOR';
+
+
+-- 유용한 함수
+select name
+from country;
+
+select length(name)
+from country;
+
+select upper(mid(name,1,3))
+from country;
+
+desc country;
+
+select name, round(lifeExpectancy,0)
+from country;
+
+
+
