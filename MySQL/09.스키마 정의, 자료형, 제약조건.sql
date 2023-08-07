@@ -1,6 +1,8 @@
 -- 스키마 정의
 create database sampleDB;
 
+show databases;
+
 use sampleDB;
 
 create table BusinessCard(id int not null auto_increment, 
@@ -9,7 +11,9 @@ create table BusinessCard(id int not null auto_increment,
 							Telephone varchar(255),
 							primary key(id)
 						);
-
+                        
+show tables;
+show create table BusinessCard;
 desc BusinessCard;
 
 insert into BusinessCard(Name, Address, Telephone) values('Bob', 'Seocho-dong 123', '123-4567');
@@ -37,4 +41,4 @@ select * from Salary;
 
 Drop table Salary;
 
-
+drop database sampleDB;
