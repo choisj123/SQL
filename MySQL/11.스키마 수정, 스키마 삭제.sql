@@ -20,12 +20,22 @@ select * from BusinessCard;
 
 alter table BusinessCard add column ID int;
 alter table BusinessCard change Address Address1 varchar(255);
-alter table BusinessCard modify Address1 char(255);
+alter table BusinessCard modify Address3 char(255);
+
+alter table BusinessCard change Address2 Address3 varchar(255);
 
 update BusinessCard set ID = 1 where Name = 'Bob';
+update BusinessCard set ID = 2 where Name = 'Sam';
 alter table BusinessCard add Primary key(ID);
 alter table BusinessCard add Unique(ID);
-alter table BusinessCard alter Address1 set default 'Seoul';
+alter table BusinessCard alter Address3 set default 'Seoul';
 alter table BusinessCard rename BusinessCards;
 
 desc BusinessCards;
+
+Truncate BusinessCards;
+
+select * from BusinessCards;
+
+drop table BusinessCards;
+
