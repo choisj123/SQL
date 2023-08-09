@@ -22,4 +22,5 @@ alter table city engine = INNODB;
 -- 기본 트랜잭션 격리 수준 확인
 select @@transaction_isolation;
 
-set transaction_isolation = 'READ-COMMITED';
+set transaction_isolation = 'READ-COMMITTED';
+set transaction_isolation = 'REPEATABLE-READ';
